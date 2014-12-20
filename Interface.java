@@ -42,34 +42,34 @@ public class Interface extends JFrame {
 
 
 	public Interface() {
-		setTitle("Шифр AES.Маша Алисова.2014.");
+		setTitle("AES.2014.");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(500 ,400);
 		setVisible(true);
-		JLabel lblNewLabel = new JLabel("Файл с ключом");
+		JLabel lblNewLabel = new JLabel("FILE key");
 		
 		textField = new JTextField();
 		textField.setColumns(10);
 		
 		JButton btnNewButton = new JButton(". . .");
 		
-		JLabel lblNewLabel_1 = new JLabel("Файл с исходным текстом");
+		JLabel lblNewLabel_1 = new JLabel("File source text");
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
 		
 		JButton btnNewButton_1 = new JButton(". . .");
 		
-		JLabel lblNewLabel_2 = new JLabel("Шифрованый файл");
+		JLabel lblNewLabel_2 = new JLabel("Crypt/Decrypt file");
 		
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
 		
 		JButton btnNewButton_2 = new JButton(". . .");
 		
-		JButton btnNewButton_3 = new JButton("Шифровать");
+		JButton btnNewButton_3 = new JButton("Crypt");
 		
-		JButton btnNewButton_4 = new JButton("Расшифровать");
+		JButton btnNewButton_4 = new JButton("Decrypt");
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)
@@ -126,7 +126,7 @@ public class Interface extends JFrame {
 		btnNewButton.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent ae){				
 					JFileChooser fileopen = new JFileChooser();  
-						int ret = fileopen.showDialog(null, "Открыть файл");
+						int ret = fileopen.showDialog(null, "OPEN");
 							if (ret == JFileChooser.APPROVE_OPTION) {
 								keyF = fileopen.getSelectedFile(); 			   
 								textField.setText(keyF.getAbsolutePath());	
@@ -136,7 +136,7 @@ public class Interface extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent ae){				
 					JFileChooser fileopen = new JFileChooser();  
-						int ret = fileopen.showDialog(null, "Открыть файл");
+						int ret = fileopen.showDialog(null, "OPEN");
 							if (ret == JFileChooser.APPROVE_OPTION) {
 								msgF = fileopen.getSelectedFile(); 			   
 								textField_1.setText(msgF.getAbsolutePath());	
@@ -146,7 +146,7 @@ public class Interface extends JFrame {
 		btnNewButton_2.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent ae){				
 					JFileChooser fileopen = new JFileChooser();  
-						int ret = fileopen.showDialog(null, "Открыть файл");
+						int ret = fileopen.showDialog(null, "OPEN");
 							if (ret == JFileChooser.APPROVE_OPTION) {
 								cphF = fileopen.getSelectedFile(); 			   
 								textField_2.setText(cphF.getAbsolutePath());	
